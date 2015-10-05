@@ -461,7 +461,7 @@ namespace NLog
         /// <param name="task">Task for which to log an exception or cancellation.</param>
         /// <returns>A task that completes when after <paramref name="task"/> completes.</returns>
         /// <remarks>
-        /// This task returned by this method does not include a return value, even if <paramref name="task"/> is of type <see cref="Task{T}"/> because the value is not present if the task causes an exception or is canceled.
+        /// The task returned by this method does not include a return value, even if <paramref name="task"/> is of type <see cref="Task{T}"/> because the value is not present if the task causes an exception or is canceled.
         /// If your code requires the return value, do not use this method to swallow the exception; instead, await the task normally and catch the exception to handle the case of no return value.
         /// </remarks>
         public async Task SwallowAsync(Task task)
